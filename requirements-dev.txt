@@ -1,0 +1,4 @@
+# CharsetSeer 开发 / 打包依赖（可选）
+# 运行本项目本身不需要安装以下任何包。
+build>=0.10      # 构建 wheel / sdist
+twine>=4.0       # 校验并上传 PyPI 发布包

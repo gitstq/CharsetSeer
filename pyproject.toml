@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "charsetseer"
+version = "1.0.0"
+description = "零依赖 · 离线优先的字符编码检测与乱码修复引擎（Zero-dependency, offline-first charset detection & mojibake repair engine）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "CharsetSeer Contributors" }]
+keywords = [
+    "charset",
+    "encoding",
+    "detector",
+    "mojibake",
+    "gbk",
+    "big5",
+    "utf-8",
+    "cli",
+    "offline",
+    "zero-dependency",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Internationalization",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Utilities",
+]
+# 核心承诺：运行时零第三方依赖
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "build>=0.10",
+    "twine>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/gitstq/CharsetSeer"
+Repository = "https://github.com/gitstq/CharsetSeer"
+Issues = "https://github.com/gitstq/CharsetSeer/issues"
+
+[project.scripts]
+charsetseer = "charsetseer.cli:main"
+
+[tool.setuptools]
+packages = ["charsetseer"]
+
+[tool.setuptools.package-data]
+charsetseer = ["py.typed"]

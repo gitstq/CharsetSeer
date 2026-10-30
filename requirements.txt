@@ -1,0 +1,9 @@
+# CharsetSeer 运行时依赖
+# ============================================================================
+# 本项目在运行时**不依赖任何第三方包**，仅使用 Python 标准库
+# （codecs / unicodedata / argparse / dataclasses / json / csv 等）。
+#
+# 因此本文件为空，仅为满足「依赖管理文件齐全」的工程规范而保留。
+# 请以 `pip install -e .` 或 `pip install charsetseer` 安装。
+#
+# 打包与发布所需的可选依赖见 requirements-dev.txt。
